@@ -9,6 +9,9 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
+
+	let romanNumeral = '';
+
   //your code here
 // console.log(convertToRoman(36));
 for (let i = 0; i < 7; i++) {
