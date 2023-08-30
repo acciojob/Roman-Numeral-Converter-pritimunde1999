@@ -25,6 +25,10 @@ for (let i = 0; i < 7; i++) {
                 // Handle subtractive notation like IV, XL, CD, etc.
                 romanNumeral += obj[i][0] + obj[i - 1][0];
                 num -= (value - obj[i - 1][1]);
+            } else if (quotient === 9 && i > 0) {
+                // Handle subtractive notation for 9, like IX, XC, CM, etc.
+                romanNumeral += obj[i][0] + obj[i - 2][0];
+                num -= (value - obj[i - 2][1]);
             } else {
                 romanNumeral += symbol.repeat(quotient);
                 num -= quotient * value;
